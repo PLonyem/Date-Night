@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For You</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="opening-screen" class="opening-screen">
+        <div class="opening-content">
+            <h1>Your eyes only</h1>
+            <button id="openBtn" class="btn-open">View Invitation</button>
+        </div>
+    </div>
+
+    <div class="container" id="mainContainer">
+        <div class="header">
+            <h1>For Diane</h1>
+            <div class="subtitle">An invitation to tomorrow</div>
+        </div>
+
+        <div class="invitation-text">
+            <p>I'm taking you out on a date tomorrow;</p>
+            <div class="romantic-line">good conversation, new possibilities, some laughs</div>
+            <p>and completely pressure-free.</p>
+            <p>Looking forward to it more than I should probably admit.</p>
+
+            <div class="direction-text" id="directionText">
+                <p>Now, I need to know if you're in...</p>
+            </div>
+        </div>
+
+
+
+        <div class="button-container" id="buttonContainer">
+            <div class="button-row">
+                <!-- Invisible hover area for No button -->
+                <div class="no-button-hover-area" id="noButtonHoverArea"></div>
+
+                <button class="btn btn-yes" id="yesButton">
+                    <i class="fas fa-heart"></i> Yes, absolutely
+                </button>
+                <button class="btn btn-no" id="noButton">
+                    No
+                </button>
+            </div>
+            <p style="margin-top: 10px; color: #8a9cc2; font-size: 0.95rem;">(The "Not this time" button is a bit
+                shy...)</p>
+        </div>
+
+        <div class="response-message" id="responseMessage">
+            <h2 class="response-title">Perfect! See you tomorrow</h2>
+
+            <div class="response-text">
+                <p>I knew you'd make the right choice.</p>
+                <p>Can't wait to see you.</p>
+            </div>
+
+            <div class="date-details-container" id="detailsSection">
+                <h3 class="details-title">The Details</h3>
+                <div class="details-grid">
+                    <div class="detail-item">
+                        <div class="detail-icon"><i class="far fa-calendar-alt"></i></div>
+                        <div class="detail-info">
+                            <div class="detail-label">Date</div>
+                            <div class="detail-value">Sunday 15th, February</div>
+                        </div>
+                    </div>
+
+                    <div class="detail-item">
+                        <div class="detail-icon"><i class="far fa-clock"></i></div>
+                        <div class="detail-info">
+                            <div class="detail-label">Time</div>
+                            <div class="detail-value">3:00 PM</div>
+                        </div>
+                    </div>
+
+                    <div class="detail-item">
+                        <div class="detail-icon"><i class="fas fa-tshirt"></i></div>
+                        <div class="detail-info">
+                            <div class="detail-label">Dress</div>
+                            <div class="detail-value">Whatever feels right</div>
+                        </div>
+                    </div>
+
+                    <div class="detail-item">
+                        <div class="detail-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="detail-info">
+                            <div class="detail-label">Location</div>
+                            <div class="detail-value">I'll text you</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="response-text">
+                <p>I'll send you the exact location tomorrow.</p>
+                <p>Just bring your awesome self!</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
