@@ -6,8 +6,8 @@
 
         body {
             font-family: 'Montserrat', sans-serif;
-            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
-            color: #333;
+            background: linear-gradient(135deg, #e8f5e9 0%, #f1f8e9 50%, #f9fbe7 100%);
+            color: #2f4f4f;
             min-height: 100vh;
             display: flex;
             justify-content: center;
@@ -23,7 +23,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+            background: linear-gradient(135deg, #e8f5e9 0%, #f1f8e9 50%, #f9fbe7 100%);
             z-index: 1000;
             display: flex;
             justify-content: center;
@@ -44,7 +44,7 @@
         .opening-content h1 {
             font-family: 'Playfair Display', serif;
             font-size: 3.5rem;
-            color: #5D4E6D;
+            color: #228B22;
             margin-bottom: 30px;
         }
 
@@ -52,9 +52,9 @@
             padding: 15px 40px;
             font-size: 1.2rem;
             font-family: 'Montserrat', sans-serif;
-            border: 2px solid #E75480;
+            border: 2px solid #228B22;
             background: transparent;
-            color: #E75480;
+            color: #228B22;
             border-radius: 50px;
             cursor: pointer;
             transition: all 0.3s ease;
@@ -64,24 +64,25 @@
         }
 
         .btn-open:hover {
-            background: #E75480;
+            background: #228B22;
             color: white;
-            box-shadow: 0 10px 20px rgba(231, 84, 128, 0.2);
+            box-shadow: 0 10px 20px rgba(34, 139, 34, 0.2);
         }
 
         .container {
             max-width: 750px;
             width: 100%;
-            background: rgba(255, 255, 255, 0.98);
+            background: rgba(255, 255, 255, 0.95);
             border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 15px 35px rgba(231, 84, 128, 0.15);
+            box-shadow: 0 15px 35px rgba(34, 139, 34, 0.15);
             position: relative;
-            border: 1px solid rgba(231, 84, 128, 0.1);
+            border: 1px solid rgba(178, 172, 136, 0.3);
             opacity: 0;
             /* Hidden initially */
             transform: translateY(20px);
             transition: all 0.8s ease;
+            z-index: 10;
         }
 
         .container.visible {
@@ -90,9 +91,9 @@
         }
 
         .header {
-            padding: 40px 30px 30px;
+            padding: 50px 30px 30px;
             text-align: center;
-            background: linear-gradient(90deg, rgba(231, 84, 128, 0.08) 0%, rgba(174, 198, 207, 0.08) 100%);
+            background: linear-gradient(90deg, rgba(34, 139, 34, 0.1) 0%, rgba(178, 172, 136, 0.1) 100%);
             position: relative;
             overflow: hidden;
         }
@@ -104,55 +105,61 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23e75480' fill-opacity='0.08' fill-rule='evenodd'/%3E%3C/svg%3E");
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23228B22' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
             opacity: 0.5;
         }
 
         h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 2.8rem;
+            font-size: 3.5rem;
             margin-bottom: 10px;
-            color: #5D4E6D;
+            color: #228B22;
             position: relative;
             z-index: 2;
             font-weight: 700;
+            letter-spacing: 0.5px;
         }
 
         .subtitle {
-            font-size: 1.1rem;
-            color: #E75480;
+            font-size: 1.3rem;
+            color: #B2AC88;
             margin-bottom: 20px;
             font-weight: 400;
             position: relative;
             z-index: 2;
             font-style: italic;
+            letter-spacing: 1px;
         }
 
         .invitation-text {
-            padding: 40px 40px 30px;
-            font-size: 1.3rem;
-            line-height: 1.8;
+            padding: 40px 40px;
+            font-size: 1.2rem;
+            line-height: 1.7;
             text-align: center;
-            background: #ffffff;
+            background: #f9faf7;
             margin: 0;
             position: relative;
             z-index: 2;
-            color: #5D4E6D;
+            color: #2f4f4f;
+            border-bottom: 1px solid #e8f5e9;
         }
 
         .romantic-line {
             font-family: 'Dancing Script', cursive;
-            font-size: 2.2rem;
-            color: #E75480;
+            font-size: 2rem;
+            color: #2E8B57;
             margin: 25px 0;
-            padding: 0 20px;
+            padding: 20px;
+            border-left: 3px solid #228B22;
+            background: rgba(34, 139, 34, 0.05);
             text-align: center;
+            border-radius: 0 10px 10px 0;
             font-weight: 700;
         }
 
         .direction-text {
             font-size: 1.1rem;
-            color: #8a9cc2;
+            color: #7A9D7A;
             margin-top: 30px;
             font-style: italic;
             padding: 0 20px;
@@ -160,26 +167,24 @@
         }
 
         .button-container {
-            padding: 30px 30px 40px;
+            padding: 40px 30px;
             text-align: center;
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: 25px;
-            background: #f8f9fa;
-            border-top: 1px solid rgba(231, 84, 128, 0.1);
+            background: #f5f7f2;
         }
 
         .button-row {
             display: flex;
             justify-content: space-between;
-            /* Separate sides */
-            align-items: center;
+            gap: 30px;
             width: 100%;
             position: relative;
             height: 120px;
             padding: 0 40px;
-            /* Space from edges */
+            align-items: center;
         }
 
         .btn {
@@ -188,8 +193,7 @@
             font-weight: 600;
             border-radius: 50px;
             cursor: pointer;
-            transition: background 0.3s ease, box-shadow 0.3s ease;
-            /* Removed transform from transition */
+            transition: all 0.3s ease;
             border: none;
             outline: none;
             font-family: 'Montserrat', sans-serif;
@@ -204,17 +208,14 @@
         }
 
         .btn-yes {
-            background: linear-gradient(90deg, #E75480 0%, #ff7ba3 100%);
+            background: linear-gradient(90deg, #228B22 0%, #2E8B57 100%);
             color: white;
             z-index: 50;
-            /* Stagnant means static position in flex flow */
-            position: relative;
         }
 
         .btn-yes:hover {
-            /* transform: translateY(-3px); REMOVED for stagnant request */
-            box-shadow: 0 8px 20px rgba(231, 84, 128, 0.25);
-            background: linear-gradient(90deg, #ff7ba3 0%, #E75480 100%);
+            box-shadow: 0 8px 20px rgba(34, 139, 34, 0.25);
+            background: linear-gradient(90deg, #2E8B57 0%, #228B22 100%);
         }
 
         .btn-yes:active {
@@ -222,24 +223,10 @@
         }
 
         .btn-no {
-            background: #e8edf2;
-            color: #8a9cc2;
-            position: absolute;
-            right: 40px;
-            /* Start aligned to right padding */
-            /* Removed 'left' property to avoid conflict, let 'right' dictate initial spot */
+            background: #e8f5e8;
+            color: #7A9D7A;
             z-index: 40;
             transition: all 0.4s ease-out;
-            /* Smooth transition for movement */
-        }
-
-        /* No button hover area - invisible trigger */
-        .no-button-hover-area {
-            position: absolute;
-            width: 250px;
-            height: 100px;
-            z-index: 1;
-            opacity: 0;
         }
 
         .response-message {
@@ -247,8 +234,8 @@
             padding: 40px 35px;
             text-align: center;
             animation: fadeIn 1s ease;
-            background: #ffffff;
-            color: #5D4E6D;
+            background: #f9faf7;
+            color: #2f4f4f;
         }
 
         @keyframes fadeIn {
@@ -265,9 +252,9 @@
 
         .response-title {
             font-family: 'Playfair Display', serif;
-            font-size: 2.8rem;
-            color: #E75480;
-            margin-bottom: 30px;
+            font-size: 3rem;
+            color: #228B22;
+            margin-bottom: 20px;
             font-weight: 700;
         }
 
@@ -275,22 +262,20 @@
             font-size: 1.2rem;
             line-height: 1.7;
             margin-bottom: 30px;
-            color: #5D4E6D;
+            color: #2f4f4f;
         }
 
         /* Success Screen Details */
         .date-details-container {
             margin: 40px 0;
             text-align: left;
-            /* Align left */
             padding-left: 40px;
-            /* Match container padding */
         }
 
         .details-title {
             font-family: 'Playfair Display', serif;
             font-size: 1.8rem;
-            color: #E75480;
+            color: #228B22;
             margin-bottom: 30px;
             font-weight: 600;
         }
@@ -304,7 +289,7 @@
         }
 
         .detail-item {
-            background: rgba(231, 84, 128, 0.05);
+            background: rgba(34, 139, 34, 0.05);
             border-radius: 15px;
             transition: all 0.3s ease;
             display: flex;
@@ -317,26 +302,26 @@
 
         .detail-item:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(231, 84, 128, 0.1);
-            background: rgba(231, 84, 128, 0.08);
+            box-shadow: 0 10px 25px rgba(34, 139, 34, 0.1);
+            background: rgba(34, 139, 34, 0.08);
         }
 
         .detail-icon {
             font-size: 2rem;
-            color: #E75480;
+            color: #228B22;
             margin-bottom: 10px;
             height: 50px;
             width: 50px;
             display: flex;
             align-items: center;
             justify-content: center;
-            background: rgba(231, 84, 128, 0.1);
+            background: rgba(34, 139, 34, 0.1);
             border-radius: 50%;
         }
 
         .detail-label {
             font-size: 0.9rem;
-            color: #8a9cc2;
+            color: #7A9D7A;
             margin-bottom: 5px;
             font-weight: 600;
             text-transform: uppercase;
@@ -345,19 +330,15 @@
 
         .detail-value {
             font-size: 1.1rem;
-            color: #5D4E6D;
+            color: #2f4f4f;
             font-weight: 600;
             line-height: 1.4;
         }
 
-        /* Removed Footer Styles */
-
         @media (max-width: 768px) {
             .button-row {
                 height: auto;
-                /* Allow auto height on mobile if needed, though we use absolute */
                 min-height: 150px;
-                /* Space for buttons to move */
             }
 
             h1 {
@@ -375,9 +356,7 @@
             }
 
             .details-grid {
-                flex-direction: column;
-                /* Stack on small screens still for readability? User said straight line, but mobile space is limited. I'll stick to flex-wrap which naturally handles it, but maybe column is safer for very small screens. let's allow wrap. */
-                gap: 15px;
+                grid-template-columns: 1fr;
             }
 
             .response-title {
@@ -386,10 +365,8 @@
 
             .btn-no {
                 position: absolute;
-                /* Keep absolute on mobile too */
                 left: 50%;
                 top: 80px;
-                /* Below Yes button */
                 transform: translateX(-50%);
             }
         }

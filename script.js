@@ -2,9 +2,10 @@ document.addEventListener('DOMContentLoaded', function () {
     // Get elements
     const yesButton = document.getElementById('yesButton');
     const noButton = document.getElementById('noButton');
-    const noButtonHoverArea = document.getElementById('noButtonHoverArea');
     const buttonContainer = document.getElementById('buttonContainer');
     const responseMessage = document.getElementById('responseMessage');
+
+    // Generate Floating Leaves - Removed per user request
 
     // Opening Screen Logic
     const openingScreen = document.getElementById('opening-screen');
@@ -171,7 +172,6 @@ document.addEventListener('DOMContentLoaded', function () {
         playSound();
     };
 
-    noButtonHoverArea.addEventListener('mouseenter', handleInteraction);
     noButton.addEventListener('mouseenter', handleInteraction);
 
     // No button click
@@ -190,6 +190,9 @@ document.addEventListener('DOMContentLoaded', function () {
         const directionText = document.getElementById('directionText');
 
         if (directionText) directionText.style.display = 'none';
+
+        // Hide No button immediately
+        if (noButton) noButton.style.display = 'none';
 
         // Create a subtle confetti effect
         createConfettiEffect();
@@ -250,8 +253,8 @@ document.addEventListener('DOMContentLoaded', function () {
         confettiContainer.style.zIndex = '1000';
         document.body.appendChild(confettiContainer);
 
-        const confettiColors = ['#E75480', '#ff7ba3', '#AEC6CF', '#8a9cc2'];
-        const confettiShapes = ['❤️', '✨', '🥂', '🌸', '💫'];
+        const confettiColors = ['#228B22', '#2E8B57', '#3CB371', '#90EE90', '#98FB98'];
+        const confettiShapes = ['🌸', '🌺', '🌼', '🌻', '🌹', '🥀', '💐', '🌷', '🌱', '🍃'];
 
         for (let i = 0; i < 40; i++) {
             const confetti = document.createElement('div');
@@ -302,24 +305,5 @@ document.addEventListener('DOMContentLoaded', function () {
         }, 2000);
     }
 
-    // Make No button move periodically even without hover (subtle movement)
-    setInterval(() => {
-        if (isMoving) return;
 
-        // Small random movement occasionally
-        if (Math.random() > 0.7) {
-            const maxX = buttonRow.offsetWidth - noButton.offsetWidth - 20;
-            const maxY = buttonRow.offsetHeight - noButton.offsetHeight - 10;
-
-            const newX = Math.random() * maxX;
-            const newY = Math.random() * maxY;
-
-            noButton.style.transition = 'all 2s ease';
-            noButton.style.left = `${newX}px`;
-            noButton.style.top = `${newY}px`;
-
-            noButtonPosition.x = newX;
-            noButtonPosition.y = newY;
-        }
-    }, 3000);
 });
