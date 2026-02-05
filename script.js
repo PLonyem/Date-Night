@@ -176,6 +176,10 @@ document.addEventListener('DOMContentLoaded', function () {
     };
 
     noButton.addEventListener('mouseenter', handleInteraction);
+    noButton.addEventListener('touchstart', (e) => {
+        e.preventDefault(); // Prevent default click to avoid double firing
+        handleInteraction(e.touches[0]); // Pass the first touch point
+    }, { passive: false });
 
     // No button click
     let noButtonClickCount = 0;
