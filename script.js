@@ -19,37 +19,33 @@ document.addEventListener('DOMContentLoaded', function () {
             mainContainer.classList.add('visible');
 
             // Initialize positions after Main Container is visible
-            updateInitialPosition();
-
-            // Move No button to body for full freedom, but keep it visually in place initially
-            const noRect = noButton.getBoundingClientRect();
-            noButton.style.position = 'fixed';
-            noButton.style.left = `${noRect.left}px`;
-            noButton.style.top = `${noRect.top}px`;
-            noButton.style.width = `${noRect.width}px`; // Maintain width
-            document.body.appendChild(noButton);
-
-            noButtonPosition.x = noRect.left;
-            noButtonPosition.y = noRect.top;
+            // We no longer move the button here to ensure it stays in layout until interaction
         }, 800);
     });
 
     // Variables for No button movement
     let noButtonPosition = { x: 0, y: 0 };
     let isMoving = false;
+    let isFixed = false; // New flag to track if we've detached it
 
-    // Initial State Check
-    // CSS places it on the right. We capture that position.
-    const updateInitialPosition = () => {
+    // Initial State Check - Removed updateInitialPosition as we do it on fly now
+
+    // Helper to make button fixed relative to viewport
+    const makeButtonFixed = () => {
+        if (isFixed) return;
+
         const noRect = noButton.getBoundingClientRect();
-        // Just storing it doesn't mean we set 'left' style yet. 
-        // We will wait until first move to set strict 'left/top' styles.
+        noButton.style.position = 'fixed';
+        noButton.style.left = `${noRect.left}px`;
+        noButton.style.top = `${noRect.top}px`;
+        noButton.style.width = `${noRect.width}px`;
+        noButton.style.margin = '0'; // Clear any margins
+        document.body.appendChild(noButton);
+
         noButtonPosition.x = noRect.left;
         noButtonPosition.y = noRect.top;
+        isFixed = true;
     };
-
-    // Call after layout
-    setTimeout(updateInitialPosition, 100);
 
     // Set initial position - We don't random position initially anymore
     // We let CSS place it next to Yes button.
@@ -122,6 +118,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Trigger movement on hover
     const handleInteraction = (e) => {
+        // First interaction: detach from flow and make fixed
+        if (!isFixed) {
+            makeButtonFixed();
+            // Allow a tiny delay for the DOM to update before calculating move?
+            // Actually, we can just proceed. The logical position is set.
+        }
+
         if (isMoving) return;
 
         // Bounding Box
